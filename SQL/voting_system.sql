@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 16, 2021 at 06:45 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.9
+-- Host: localhost
+-- Generation Time: Nov 20, 2023 at 01:37 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,15 +31,15 @@ CREATE TABLE `admin` (
   `FullName` varchar(30) NOT NULL,
   `Username` varchar(30) NOT NULL,
   `Password` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`FullName`, `Username`, `Password`) VALUES
-('kushal verma', 'Kushal@admin.com', 'Admin'),
-('Lokendra rajput', 'Lokendra@admin.com', 'Admin');
+('Allan', 'admin@gmail.com', 'admin'),
+('Austin', 'austin@gmail.com', '12345');
 
 -- --------------------------------------------------------
 
@@ -53,17 +53,19 @@ CREATE TABLE `nominee` (
   `Image` varchar(100) NOT NULL,
   `Votes` int(100) NOT NULL,
   `Status` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `nominee`
 --
 
 INSERT INTO `nominee` (`FullName`, `PartyName`, `Image`, `Votes`, `Status`) VALUES
-('Apple', 'SWIFT', 'ios.png', 1, 'ON'),
-('C', 'microsoft', 'microsoft.jpg', 0, 'OFF'),
-('C/C++', 'linux', 'linux.jpg', 0, 'OFF'),
-('JAVA', 'android', 'android1.png', 0, 'OFF');
+('AKINYI JURRYT', '(School of Tours and Travels)', 'user.jpg', 0, 'OFF'),
+('CALEB OTIENO', '(School of Tours and Travels.)', 'anime.jpg', 0, 'OFF'),
+('KEVIN YAOLA', '(School of Hospitality)', 'easy.jpeg', 0, 'OFF'),
+('LAWRENCE CIRO', '(School of Business.)', 'count.jpg', 0, 'OFF'),
+('MURIEL NOACH', '(School of Business)', 'vote.webp', 1, 'OFF'),
+('SHAWN MBUGUA', '(School of Hospitality.)', 'anime.jpg', 0, 'OFF');
 
 -- --------------------------------------------------------
 
@@ -79,17 +81,17 @@ CREATE TABLE `register` (
   `Password` varchar(30) NOT NULL,
   `Status` varchar(11) NOT NULL,
   `Voted` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `register`
 --
 
 INSERT INTO `register` (`FullName`, `MobileNo`, `Email`, `DOB`, `Password`, `Status`, `Voted`) VALUES
-('anuj jain', 1111625455, 'aj@rock.com', '2000-04-02', '12345', 'ON', 'NO'),
-('Abhishek Nagre', 1245352514, 'an@rock.com', '2000-05-08', '12345', 'ON', 'YES'),
-('lokendra Rajput', 9575210508, 'lok@rock.com', '2000-12-08', '12345', 'ON', 'YES'),
-('siddhant', 1245352514, 'sk@admin.com', '2000-05-08', '12345', 'ON', 'NO');
+('haha', 1245352514, 'an@rock.com', '2000-05-08', '12345', 'ON', 'YES'),
+('rihana', 9575210508, 'lok@rock.com', '2000-12-08', '12345', 'ON', 'YES'),
+('user1', 1234567890, 'user1@gmail.com', '2023-11-20', '12345', 'ON', 'YES'),
+('Austin', 1234567890, 'user@gmail.com', '2023-11-20', '12345', 'ON', 'YES');
 
 --
 -- Indexes for dumped tables
